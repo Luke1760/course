@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @curriculum.title
+%p
+  %b Description:
+  = @curriculum.description
+
+= link_to 'Edit', edit_curriculum_path(@curriculum)
+\|
+= link_to 'Back', curriculums_path
