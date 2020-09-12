@@ -12,6 +12,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
 gem "haml-rails", "~> 2.0"
+gem 'bootstrap', '~> 4.4.1'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
