@@ -25,7 +25,7 @@ class CurriculumsController < ApplicationController
   # POST /curriculums.json
   def create
     @curriculum = Curriculum.new(curriculum_params)
-
+    @curriculum.user = current_user
     respond_to do |format|
       if @curriculum.save
         format.html { redirect_to @curriculum, notice: 'Curriculum was successfully created.' }

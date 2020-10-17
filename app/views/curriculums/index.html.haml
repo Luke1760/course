@@ -5,6 +5,7 @@
     %tr
       %th Title
       %th Description
+      %th User
       %th
       %th
       %th
@@ -14,6 +15,7 @@
       %tr
         %td= curriculum.title
         %td= curriculum.description
+        %td= curriculum.user_id
         %td= link_to 'Show', curriculum
         %td= link_to 'Edit', edit_curriculum_path(curriculum)
         %td= link_to 'Destroy', curriculum, method: :delete, data: { confirm: 'Are you sure?' }
