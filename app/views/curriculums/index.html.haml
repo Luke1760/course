@@ -1,24 +1,10 @@
-%h1 Listing curriculums
-
-%table.table
-  %thead
-    %tr
-      %th Title
-      %th Description
-      %th User
-      %th
-      %th
-      %th
-
-  %tbody
-    - @curriculums.each do |curriculum|
-      %tr
-        %td= curriculum.title
-        %td= curriculum.description
-        %td= curriculum.user_id
-        %td= link_to 'Show', curriculum
-        %td= link_to 'Edit', edit_curriculum_path(curriculum)
-        %td= link_to 'Destroy', curriculum, method: :delete, data: { confirm: 'Are you sure?' }
+%h1 
+  Curriculums:
+  = @curriculums.count
+  
+.card-columns
+  - @curriculums.each do |curriculum|
+    =  render 'curriculums/curriculum', curriculum: curriculum
 
 %br
 

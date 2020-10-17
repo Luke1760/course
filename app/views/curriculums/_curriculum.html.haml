@@ -1,0 +1,12 @@
+.card 
+  .card-header
+    = curriculum.title
+  .card-body
+    = curriculum.description
+  .card-footer
+    = curriculum.created_at
+    = curriculum.user
+  .card-footer
+    = link_to 'Show', curriculum, class: 'btn btn-primary'
+    = link_to 'Edit', edit_curriculum_path(curriculum), class: 'btn btn-warning'
+    = link_to 'Destroy', curriculum, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'

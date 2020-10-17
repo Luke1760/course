@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :curriculums         
   
   def to_s
-    eamil
+    email
   end
 end
