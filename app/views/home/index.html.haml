@@ -6,7 +6,35 @@
       %form.form-inline
         %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
         %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
-
+.card-group
+  .card.card-body
+    %h1
+      .fa.fa-graduation-cap
+    = Curriculum.count
+    online curriculums
+    .row
+    Explore a variety of fresh topics
+  .card.card-body
+    %h1
+      .fas.fa-chalkboard-teacher
+    = Curriculum.distinct.count(:user_id)
+    explore instructors
+    .row
+    Find the right instructor for you
+  .card.card-body
+    %h1
+      .fa.fa-user-graduate
+    = User.count
+    active learners
+    .row
+    Join the knowledge sharing community
+  .card.card-body
+    %h1
+      .fa.fa-infinity
+    Lifetime access
+    .row
+    Leran on your schedule
+%p
 %h2
   Popular curriculums
 .card-columns
