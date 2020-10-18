@@ -20,7 +20,7 @@
     =  render 'curriculums/curriculum', curriculum: curriculum
 %hr
 %h2
-  Most recent curriculums
+  Latest curriculums
 .card-columns
-  - @curriculums.each do |curriculum|
+  - @latest_curriculums.each do |curriculum|
     =  render 'curriculums/curriculum', curriculum: curriculum
