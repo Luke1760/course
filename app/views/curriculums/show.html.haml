@@ -1,11 +1,4 @@
-%p#notice= notice
-
-%p
-  %b Title:
-  = @curriculum.title
-%p
-  %b Description:
-  = @curriculum.description
+= render "curriculums/curriculum", curriculum: @curriculum
 
 = link_to 'Edit', edit_curriculum_path(@curriculum)
 \|
