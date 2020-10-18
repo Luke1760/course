@@ -1,5 +1,6 @@
+= link_to 'Curriculums', curriculums_path
+\/
+= link_to @curriculum.title, curriculum_path(@curriculum)
+%p
 = render "curriculums/curriculum", curriculum: @curriculum
 
-= link_to 'Edit', edit_curriculum_path(@curriculum)
-\|
-= link_to 'Back', curriculums_path
