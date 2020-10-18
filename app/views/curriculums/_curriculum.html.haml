@@ -1,10 +1,14 @@
 .card 
   .card-header
+    .fa.fa-book
     = curriculum.title
   .card-body
     = curriculum.description
   .card-footer
-    = curriculum.created_at
+    .far.fa-clock
+    = curriculum.created_at.strftime("%d-%b-%Y")
+    .row
+    .fas.fa-chalkboard-teacher
     = curriculum.user
   .card-footer
     = link_to 'Show', curriculum, class: 'btn btn-primary'
