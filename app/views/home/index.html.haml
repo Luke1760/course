@@ -1,12 +1,26 @@
-%h1
-  Hello#world
-  %p Find me in app/views/home/index.html.haml
-  
-  .fa.fa-flag
-  .fab.fa-amazon
-= link_to reset_path do
-  .fa.fa-home
-  
-= link_to curriculums_path, class: 'btn btn-success' do
-  .fa.fa-book
-  Curriculum
+.jumbotron
+  .display-4
+    What do you want to learn today?
+  %p
+    %nav.navbar.navbar-light.bg-light
+      %form.form-inline
+        %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+        %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+
+%h2
+  Popular curriculums
+.card-columns
+  - @curriculums.each do |curriculum|
+    =  render 'curriculums/curriculum', curriculum: curriculum
+%hr
+%h2
+  Top related curriculums
+.card-columns
+  - @curriculums.each do |curriculum|
+    =  render 'curriculums/curriculum', curriculum: curriculum
+%hr
+%h2
+  Most recent curriculums
+.card-columns
+  - @curriculums.each do |curriculum|
+    =  render 'curriculums/curriculum', curriculum: curriculum
